@@ -10,9 +10,9 @@ public class Main
         Scanner input = new Scanner(System.in);
 
         int min = 1;
-        int max = 10;
+        int max = 2;
 
-        double num = (Math.random() * 2) + 1;
+        double num = (Math.random() * max) + 1;
         System.out.println(num);
         String realNum = Double.toString(num);
         System.out.println(realNum);
@@ -26,7 +26,7 @@ public class Main
 
         while(!(right))
         {
-            System.out.println("What is your guess?");
+            System.out.println("What is your guess? (" + min + "-" + max + ")");
             guess = input.nextLine();
 
             if(guess.length() == 0)
@@ -42,11 +42,10 @@ public class Main
                 }
                 else
                 {
-                    System.out.println("Try again.");
+                    System.out.println("Try Again.");
                 }
             }
         }
-
 
         input.close();
     }
