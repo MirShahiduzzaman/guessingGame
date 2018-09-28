@@ -10,15 +10,12 @@ public class Main
         Scanner input = new Scanner(System.in);
 
         int min = 1;
-        int max = 2;
+        int max = 10;
 
         double num = (Math.random() * max) + 1;
-        System.out.println(num);
         String realNum = Double.toString(num);
-        System.out.println(realNum);
 
         realNum = realNum.substring(0,realNum.indexOf("."));
-        System.out.println(realNum);
         //everything b4 this line establishes the num
 
         boolean right = false;
@@ -35,6 +32,7 @@ public class Main
             }
             else
             {
+                System.out.println();
                 if(guess.equals(realNum))
                 {
                     System.out.println("You got it!");
